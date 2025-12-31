@@ -1,0 +1,15 @@
+site_name: TaskVault - Technical Documentation
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Architecture Overview: architecture.md
+  - Database Schema: database-schema.md
+  - Authentication & Roles: authentication.md
+  - Permissions Flow: permissions.md
+  - Task History System: task-history.md
+  - API Endpoints: api-endpoints.md
+
+plugins:
+  - search
+  - mermaid2
