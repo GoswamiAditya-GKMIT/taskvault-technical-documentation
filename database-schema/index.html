@@ -203,7 +203,9 @@ erDiagram
 
     USERS {
         UUID id PK
-        VARCHAR(150) name
+        VARCHAR(150) username "UNIQUE"
+        VARCHAR(150) first_name
+        VARCHAR(150) last_name
         VARCHAR(255) email "UNIQUE"
         VARCHAR(128) password
         ENUM role  "admin | user"
