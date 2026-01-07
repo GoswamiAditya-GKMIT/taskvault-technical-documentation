@@ -310,9 +310,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#roles-capabilities" class="md-nav__link">
+  <a href="#authentication-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
-      Roles &amp; Capabilities
+      Authentication Mechanism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Capabilities
     </span>
   </a>
   
@@ -428,9 +446,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#roles-capabilities" class="md-nav__link">
+  <a href="#authentication-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
-      Roles &amp; Capabilities
+      Authentication Mechanism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Capabilities
     </span>
   </a>
   
@@ -461,9 +497,50 @@
 
 
 
+<!-- # Authentication & Roles
+
+TaskVault uses **JWT Authentication**.
+
+## Roles & Capabilities
+
+| Capability | Admin | User |
+|------------|-------|------|
+| Create account | Yes | Yes |
+| Create task for self | Yes | Yes |
+| Assign tasks | Yes |  No |
+| View all tasks | Yes |  No |
+| Modify all tasks | Yes |  No |
+| View assigned tasks | Yes | Yes |
+| Modify assigned or self tasks | Yes |  Yes |
+| Modify history logs | No |  No |
+
+## Login Flow
+1. POST `/api/auth/login/`
+2. Receive Access + Refresh tokens
+3. Include token in request header: -->
+
 <h1 id="authentication-roles">Authentication &amp; Roles</h1>
-<p>TaskVault uses <strong>JWT Authentication</strong>.</p>
-<h2 id="roles-capabilities">Roles &amp; Capabilities</h2>
+<p>TaskVault uses JWT (JSON Web Token) based authentication.
+All protected endpoints require a valid access token.</p>
+<hr />
+<h2 id="authentication-mechanism">Authentication Mechanism</h2>
+<ul>
+<li>Access Token: Used for authenticated API requests</li>
+<li>Refresh Token: Used to obtain a new access token</li>
+<li>Tokens are issued during login</li>
+<li>Tokens are invalidated on logout</li>
+<li>Deleted users cannot authenticate</li>
+</ul>
+<hr />
+<h2 id="roles">Roles</h2>
+<p>TaskVault defines two roles:</p>
+<ul>
+<li>Admin</li>
+<li>User</li>
+</ul>
+<p>Each role has clearly defined capabilities.</p>
+<hr />
+<h2 id="role-capabilities">Role Capabilities</h2>
 <table>
 <thead>
 <tr>
@@ -474,7 +551,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Create account</td>
+<td>Register account</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
@@ -484,7 +561,7 @@
 <td>Yes</td>
 </tr>
 <tr>
-<td>Assign tasks</td>
+<td>Assign tasks to users</td>
 <td>Yes</td>
 <td>No</td>
 </tr>
@@ -494,32 +571,38 @@
 <td>No</td>
 </tr>
 <tr>
-<td>Modify all tasks</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
 <td>View assigned tasks</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Modify assigned or self tasks</td>
+<td>Update self tasks</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Modify history logs</td>
+<td>Update assigned tasks</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Delete self tasks</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Modify task history</td>
 <td>No</td>
 <td>No</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="login-flow">Login Flow</h2>
 <ol>
-<li>POST <code>/api/auth/login/</code></li>
-<li>Receive Access + Refresh tokens</li>
-<li>Include token in request header:</li>
+<li>Client sends credentials to <code>/api/v1/auth/login/</code></li>
+<li>Server returns access and refresh tokens</li>
+<li>Access token is sent in <code>Authorization</code> header:</li>
 </ol>
 
 

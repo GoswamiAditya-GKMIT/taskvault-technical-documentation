@@ -266,9 +266,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#architectural-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modules-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
       Modules Breakdown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-architecture-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Architecture Works
     </span>
   </a>
   
@@ -419,9 +437,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#architectural-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modules-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
       Modules Breakdown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-architecture-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Architecture Works
     </span>
   </a>
   
@@ -443,9 +479,45 @@
 
 
 
+<!-- 
+# System Architecture
+
+TaskVault follows a layered backend architecture:
+
+Client → URL → DRF Views (Business Logic) → Serializers → Models → Postgres DB
+
+
+## Modules Breakdown
+| Module | Description |
+|--------|-------------|
+| `accounts` | Authentication, User, roles, permissions |
+| `tasks` | Task CRUD, assignment logic, status & priority changes |
+| `comments` | Adds discussion and collaboration on tasks |
+| `task history` | Stores immutable audit logs |
+
+ -->
+
 <h1 id="system-architecture">System Architecture</h1>
-<p>TaskVault follows a layered backend architecture:</p>
-<p>Client → URL → DRF Views (Business Logic) → Serializers → Models → Postgres DB</p>
+<p>TaskVault follows a layered backend architecture that separates responsibilities clearly and keeps business logic maintainable.</p>
+<p>Request Flow:</p>
+<p>Client<br />
+→ URL Router<br />
+→ DRF Views<br />
+→ Serializers<br />
+→ Service Layer<br />
+→ Models<br />
+→ PostgreSQL Database</p>
+<hr />
+<h2 id="architectural-principles">Architectural Principles</h2>
+<ul>
+<li>API-first design</li>
+<li>Separation of concerns</li>
+<li>Explicit permission handling</li>
+<li>Service-based business logic</li>
+<li>Soft delete over hard delete</li>
+<li>Immutable audit logs</li>
+</ul>
+<hr />
 <h2 id="modules-breakdown">Modules Breakdown</h2>
 <table>
 <thead>
@@ -456,23 +528,35 @@
 </thead>
 <tbody>
 <tr>
-<td><code>accounts</code></td>
-<td>Authentication, User, roles, permissions</td>
+<td>users</td>
+<td>Authentication, user management, roles</td>
 </tr>
 <tr>
-<td><code>tasks</code></td>
-<td>Task CRUD, assignment logic, status &amp; priority changes</td>
+<td>tasks</td>
+<td>Task CRUD, assignment rules, filtering</td>
 </tr>
 <tr>
-<td><code>comments</code></td>
-<td>Adds discussion and collaboration on tasks</td>
+<td>comments</td>
+<td>Task discussion and collaboration</td>
 </tr>
 <tr>
-<td><code>task history</code></td>
-<td>Stores immutable audit logs</td>
+<td>task history</td>
+<td>Immutable audit logs for task updates</td>
+</tr>
+<tr>
+<td>core</td>
+<td>Shared utilities, permissions, pagination</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="why-this-architecture-works">Why This Architecture Works</h2>
+<ul>
+<li>Views remain thin and readable</li>
+<li>Permissions are centralized and reusable</li>
+<li>Business rules are isolated in services</li>
+<li>Data integrity is preserved even after deletion</li>
+</ul>
 
 
 

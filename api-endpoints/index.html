@@ -382,6 +382,93 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagination
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success-
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error -
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task History
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -425,6 +512,93 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagination
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success-
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error -
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tasks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task History
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -441,6 +615,73 @@
 
 
 
+<!-- # REST API Design
+
+## Base Configuration
+
+| Setting | Value |
+|---------|--------|
+| **Base URL** | `/api/v1/` |
+| **API Versioning** | URI-based (e.g., `/api/v1/...`) |
+| **Authentication** | JWT (Access & Refresh Tokens) |
+| **Pagination** | Enabled for all list endpoints (default: 10 items per page) |
+| **Update Strategy** | `PATCH` for partial updates — `PUT` is not used |
+
+# REST API Endpoints
+
+## Authentication
+| Method | Endpoint | Description |
+|--------|----------|--------------|
+| POST | `/auth/register/` | Register user |
+| POST | `/auth/login/` | Login & get JWT token |
+| POST | `/auth/refresh/` | refresh JWT token |
+| POST | `/auth/logout/` | Logout |
+| GET | `/auth/rest-password/` | password reset |
+
+---
+
+## User Management 
+| Method | Endpoint | Description |
+|--------|-----------|--------------|
+| GET | `/users/` | List users |
+| GET | `/users/{id}/` | Get single user |
+| PUT/PATCH | `/users/{id}/` | Update user details |
+| DELETE | `/users/{id}/` | Soft delete task |
+
+
+## Tasks
+| Method | Endpoint | Description |
+|--------|-----------|--------------|
+| GET | `/tasks/` | List tasks (filtered by permission) |
+| POST | `/tasks/` | Create task |
+| GET | `/tasks/{id}/` | Get single task |
+| PUT/PATCH | `/tasks/{id}/` | Update task fields |
+| DELETE | `/tasks/{id}/` | Soft delete task |
+
+---
+
+<!-- ## Task Assignment
+| Method | Endpoint |
+|--------|-----------|
+| PATCH | `/tasks/{id}/assign/` |
+
+---  -->
+<!-- 
+## Comments
+| Method | Endpoint |
+|--------|-----------|
+| POST | `/tasks/{id}/comments/` |
+| GET | `/tasks/{id}/comments/` |
+| GET | `/tasks/{id}/comments/{id}` |
+| PUT/PATCH | `/tasks/{id}/comments/{id}` |
+
+---
+
+## Task History
+| Method | Endpoint |
+|--------|-----------|
+| GET | `/tasks/{id}/history/` | View history of a task | -->
+
 <h1 id="rest-api-design">REST API Design</h1>
 <h2 id="base-configuration">Base Configuration</h2>
 <table>
@@ -452,28 +693,52 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Base URL</strong></td>
+<td>Base URL</td>
 <td><code>/api/v1/</code></td>
 </tr>
 <tr>
-<td><strong>API Versioning</strong></td>
-<td>URI-based (e.g., <code>/api/v1/...</code>)</td>
+<td>Versioning</td>
+<td>URI-based</td>
 </tr>
 <tr>
-<td><strong>Authentication</strong></td>
-<td>JWT (Access &amp; Refresh Tokens)</td>
+<td>Authentication</td>
+<td>JWT</td>
 </tr>
 <tr>
-<td><strong>Pagination</strong></td>
-<td>Enabled for all list endpoints (default: 10 items per page)</td>
+<td>Pagination</td>
+<td>Enabled for list endpoints</td>
 </tr>
 <tr>
-<td><strong>Update Strategy</strong></td>
-<td><code>PATCH</code> for partial updates — <code>PUT</code> is not used</td>
+<td>Update Strategy</td>
+<td>PATCH only</td>
 </tr>
 </tbody>
 </table>
-<h1 id="rest-api-endpoints">REST API Endpoints</h1>
+<h2 id="pagination">Pagination</h2>
+<ul>
+<li>Pagination is applied to the list api's</li>
+</ul>
+<hr />
+<h2 id="response-structure">Response Structure</h2>
+<h3 id="success-">Success-</h3>
+<pre><code>{
+&quot;status&quot;: &quot;success&quot;,
+&quot;message&quot;: &quot;Data retrieved successfully&quot;,
+&quot;data&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;abcd&quot;
+               },
+}
+</code></pre>
+<h3 id="error-">Error -</h3>
+<pre><code>{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;message&quot;: &quot;Validation failed&quot;,
+  &quot;errors&quot;: {
+
+  }
+}
+</code></pre>
 <h2 id="authentication">Authentication</h2>
 <table>
 <thead>
@@ -492,22 +757,17 @@
 <tr>
 <td>POST</td>
 <td><code>/auth/login/</code></td>
-<td>Login &amp; get JWT token</td>
+<td>Login</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><code>/auth/refresh/</code></td>
-<td>refresh JWT token</td>
+<td>Refresh token</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><code>/auth/logout/</code></td>
 <td>Logout</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><code>/auth/rest-password/</code></td>
-<td>password reset</td>
 </tr>
 </tbody>
 </table>
@@ -525,25 +785,31 @@
 <tr>
 <td>GET</td>
 <td><code>/users/</code></td>
-<td>List users</td>
+<td>List users (admin only)</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><code>/users/{id}/</code></td>
-<td>Get single user</td>
+<td>Get user (admin or self)</td>
 </tr>
 <tr>
-<td>PUT/PATCH</td>
+<td>PATCH</td>
 <td><code>/users/{id}/</code></td>
-<td>Update user details</td>
+<td>Update user (admin or self)</td>
 </tr>
 <tr>
 <td>DELETE</td>
 <td><code>/users/{id}/</code></td>
-<td>Soft delete task</td>
+<td>Soft delete user(admin or self)</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/users/reset-password/</code></td>
+<td>Reset password (admin or self)</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="tasks">Tasks</h2>
 <table>
 <thead>
@@ -557,62 +823,65 @@
 <tr>
 <td>GET</td>
 <td><code>/tasks/</code></td>
-<td>List tasks (filtered by permission)</td>
+<td>List tasks (admin or self)</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><code>/tasks/</code></td>
-<td>Create task</td>
+<td>Create task (admin or self)</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><code>/tasks/{id}/</code></td>
-<td>Get single task</td>
+<td>Get task (admin or self)</td>
 </tr>
 <tr>
-<td>PUT/PATCH</td>
+<td>PATCH</td>
 <td><code>/tasks/{id}/</code></td>
-<td>Update task fields</td>
+<td>Update task (admin or self)</td>
 </tr>
 <tr>
 <td>DELETE</td>
 <td><code>/tasks/{id}/</code></td>
-<td>Soft delete task</td>
+<td>Soft delete task (admin or self)</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<!-- ## Task Assignment
-| Method | Endpoint |
-|--------|-----------|
-| PATCH | `/tasks/{id}/assign/` |
-
----  -->
-
 <h2 id="comments">Comments</h2>
 <table>
 <thead>
 <tr>
 <th>Method</th>
 <th>Endpoint</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>POST</td>
 <td><code>/tasks/{id}/comments/</code></td>
+<td>Add comment (admin or self)</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><code>/tasks/{id}/comments/</code></td>
+<td>List comments (admin or self)</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><code>/tasks/{id}/comments/{id}</code></td>
+<td>Get comment (admin or self)</td>
 </tr>
 <tr>
-<td>PUT/PATCH</td>
+<td>PATCH</td>
 <td><code>/tasks/{id}/comments/{id}</code></td>
+<td>Update comment (admin or self)</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/tasks/{id}/comments/{id}</code></td>
+<td>Delete comment (admin or self)</td>
 </tr>
 </tbody>
 </table>
@@ -623,12 +892,14 @@
 <tr>
 <th>Method</th>
 <th>Endpoint</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>GET</td>
 <td><code>/tasks/{id}/history/</code></td>
+<td>View task history</td>
 </tr>
 </tbody>
 </table>

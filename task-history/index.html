@@ -354,18 +354,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-history-is-recorded" class="md-nav__link">
+  <a href="#what-is-recorded" class="md-nav__link">
     <span class="md-ellipsis">
-      When History is Recorded
+      What Is Recorded
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#not-recorded-when" class="md-nav__link">
+  <a href="#design-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Not Recorded When
+      Design Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
     </span>
   </a>
   
@@ -428,18 +446,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-history-is-recorded" class="md-nav__link">
+  <a href="#what-is-recorded" class="md-nav__link">
     <span class="md-ellipsis">
-      When History is Recorded
+      What Is Recorded
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#not-recorded-when" class="md-nav__link">
+  <a href="#design-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Not Recorded When
+      Design Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
     </span>
   </a>
   
@@ -461,44 +497,51 @@
 
 
 
+<!-- # Task History System
+
+The history table represents immutable snapshots of change.
+
+| Field | Meaning |
+|-------|----------|
+| old_status / new_status | Tracks workflow progress |
+| old_priority / new_priority | Tracks urgency decisions |
+| actor_id | Who performed the edit |
+| created_at | When the change happened |
+
+## When History is Recorded
+- Status change
+- Priority change
+
+## Not Recorded When
+- No field difference between old/new
+- Soft-delete of record -->
+
 <h1 id="task-history-system">Task History System</h1>
-<p>The history table represents immutable snapshots of change.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>old_status / new_status</td>
-<td>Tracks workflow progress</td>
-</tr>
-<tr>
-<td>old_priority / new_priority</td>
-<td>Tracks urgency decisions</td>
-</tr>
-<tr>
-<td>actor_id</td>
-<td>Who performed the edit</td>
-</tr>
-<tr>
-<td>created_at</td>
-<td>When the change happened</td>
-</tr>
-</tbody>
-</table>
-<h2 id="when-history-is-recorded">When History is Recorded</h2>
+<p>TaskVault maintains an immutable audit log for task updates.</p>
+<hr />
+<h2 id="what-is-recorded">What Is Recorded</h2>
 <ul>
-<li>Status change</li>
-<li>Priority change</li>
+<li>Old and new task status</li>
+<li>Old and new task priority</li>
+<li>User who made the change</li>
+<li>Timestamp of change</li>
 </ul>
-<h2 id="not-recorded-when">Not Recorded When</h2>
+<hr />
+<h2 id="design-principles">Design Principles</h2>
 <ul>
-<li>No field difference between old/new</li>
-<li>Soft-delete of record</li>
+<li>History records are never updated or deleted</li>
+<li>History is created only when meaningful changes occur</li>
+<li>History is read-only via API</li>
 </ul>
+<hr />
+<h2 id="access-rules">Access Rules</h2>
+<ul>
+<li>Admin can view history of any task</li>
+<li>User can view history only for tasks assigned to them</li>
+</ul>
+<hr />
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>This ensures accountability, traceability, and trust in the task management workflow.</p>
 
 
 

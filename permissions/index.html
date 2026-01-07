@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#permissions-logic" class="md-skip">
+        <a href="#permissions-flow" class="md-skip">
           Skip to content
         </a>
       
@@ -332,18 +332,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#access-rules" class="md-nav__link">
+  <a href="#permission-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Access Rules
+      Permission Strategy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#validation-rules" class="md-nav__link">
+  <a href="#permission-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation Rules
+      Permission Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits
     </span>
   </a>
   
@@ -428,18 +437,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#access-rules" class="md-nav__link">
+  <a href="#permission-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Access Rules
+      Permission Strategy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#validation-rules" class="md-nav__link">
+  <a href="#permission-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Validation Rules
+      Permission Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits
     </span>
   </a>
   
@@ -461,44 +479,48 @@
 
 
 
-<h1 id="permissions-logic">Permissions Logic</h1>
-<h2 id="access-rules">Access Rules</h2>
-<table>
-<thead>
-<tr>
-<th>Entity</th>
-<th>Admin</th>
-<th>User</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>User list</td>
-<td>Full Access</td>
-<td>Self Only</td>
-</tr>
-<tr>
-<td>Task</td>
-<td>Full Access on tasks Assigned to users and on self tasks , and view access on users self tasks</td>
-<td>Owned or Assigned</td>
-</tr>
-<tr>
-<td>Comments</td>
-<td>Full Access</td>
-<td>Owned or Assigned</td>
-</tr>
-<tr>
-<td>Task History</td>
-<td>Full Access</td>
-<td>Only for owned and assigned tasks</td>
-</tr>
-</tbody>
-</table>
-<h2 id="validation-rules">Validation Rules</h2>
+<!-- # Permissions Logic
+
+## Access Rules
+| Entity | Admin | User |
+|--------|-------|------|
+| User list | Full Access | Self Only |
+| Task | Full Access on tasks Assigned to users and on self tasks , and view access on users self tasks | Owned or Assigned |
+| Comments | Full Access | Owned or Assigned |
+| Task History | Full Access | Only for owned and assigned tasks|
+
+## Validation Rules
+- A user cannot assign tasks
+- Admin must specify an assignee if assigning
+- Comments are visible only to task participants
+ -->
+
+<h1 id="permissions-flow">Permissions Flow</h1>
+<p>TaskVault uses explicit permission classes to control access.
+All permission logic is centralized in <code>core/permissions.py</code>.</p>
+<hr />
+<h2 id="permission-strategy">Permission Strategy</h2>
 <ul>
-<li>A user cannot assign tasks</li>
-<li>Admin must specify an assignee if assigning</li>
-<li>Comments are visible only to task participants</li>
+<li>Authentication is enforced globally</li>
+<li>Object-level permissions are used for sensitive resources</li>
+<li>Views do not contain role or permission logic</li>
+<li>Permissions are evaluated against actual model instances</li>
+</ul>
+<hr />
+<h2 id="permission-examples">Permission Examples</h2>
+<ul>
+<li>Admin can access all tasks</li>
+<li>User can access only assigned or self-owned tasks</li>
+<li>Comments inherit permissions from their parent task</li>
+<li>Task history is visible only if task access is allowed</li>
+</ul>
+<hr />
+<h2 id="benefits">Benefits</h2>
+<ul>
+<li>No permission duplication</li>
+<li>Clear enforcement rules</li>
+<li>Easy to test and extend</li>
+<li>Consistent behavior across the system</li>
 </ul>
 
 
