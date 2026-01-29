@@ -9,14 +9,17 @@
       
       
       
-        <link rel="prev" href="../requirements/">
+        <link rel="prev" href="../database-schema/">
       
       
         <link rel="next" href="../permissions/">
       
       
+        
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -24,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -49,7 +52,6 @@
 
     
     
-    
   </head>
   
   
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#authentication-roles" class="md-skip">
+        <a href="#authentication-security" class="md-skip">
           Skip to content
         </a>
       
@@ -199,53 +201,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
   
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Architecture Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../database-schema/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Database Schema
-    
-  </span>
   
 
       </a>
@@ -265,9 +228,68 @@
   
   
   <span class="md-ellipsis">
+    
+  
     System Requirements
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Schema
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -296,9 +318,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Authentication & Roles
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -309,9 +336,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Authentication & Roles
+  
+
     
   </span>
+  
   
 
       </a>
@@ -334,34 +366,120 @@
         <li class="md-nav__item">
   <a href="#authentication-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Mechanism
+      
+        Authentication Mechanism
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#roles" class="md-nav__link">
+  <a href="#authentication-flows" class="md-nav__link">
     <span class="md-ellipsis">
-      Roles
+      
+        Authentication Flows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-registration-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Registration &amp; Verification
+      
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#role-capabilities" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-login-with-otp-2fa" class="md-nav__link">
     <span class="md-ellipsis">
-      Role Capabilities
+      
+        2. Login with OTP (2FA)
+      
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#3-password-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Password Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-invitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Invitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#login-flow" class="md-nav__link">
+  <a href="#token-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Login Flow
+      
+        Token Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Token Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refreshing-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refreshing Tokens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout-blacklisting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logout (Blacklisting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Features
+      
     </span>
   </a>
   
@@ -387,9 +505,41 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Permissions Flow
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows & Edge Cases
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -409,9 +559,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Task History System
+  
+
     
   </span>
+  
   
 
       </a>
@@ -431,9 +586,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     API Endpoints
+  
+
     
   </span>
+  
   
 
       </a>
@@ -453,9 +613,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Conclusion & future Scope
+  
+
     
   </span>
+  
   
 
       </a>
@@ -492,34 +657,120 @@
         <li class="md-nav__item">
   <a href="#authentication-mechanism" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Mechanism
+      
+        Authentication Mechanism
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#roles" class="md-nav__link">
+  <a href="#authentication-flows" class="md-nav__link">
     <span class="md-ellipsis">
-      Roles
+      
+        Authentication Flows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Flows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-registration-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Registration &amp; Verification
+      
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#role-capabilities" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-login-with-otp-2fa" class="md-nav__link">
     <span class="md-ellipsis">
-      Role Capabilities
+      
+        2. Login with OTP (2FA)
+      
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#3-password-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Password Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-invitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Invitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#login-flow" class="md-nav__link">
+  <a href="#token-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Login Flow
+      
+        Token Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Token Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refreshing-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refreshing Tokens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout-blacklisting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logout (Blacklisting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Features
+      
     </span>
   </a>
   
@@ -535,119 +786,69 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
 
-<!-- # Authentication & Roles
-
-TaskVault uses **JWT Authentication**.
-
-## Roles & Capabilities
-
-| Capability | Admin | User |
-|------------|-------|------|
-| Create account | Yes | Yes |
-| Create task for self | Yes | Yes |
-| Assign tasks | Yes |  No |
-| View all tasks | Yes |  No |
-| Modify all tasks | Yes |  No |
-| View assigned tasks | Yes | Yes |
-| Modify assigned or self tasks | Yes |  Yes |
-| Modify history logs | No |  No |
-
-## Login Flow
-1. POST `/api/auth/login/`
-2. Receive Access + Refresh tokens
-3. Include token in request header: -->
-
-<h1 id="authentication-roles">Authentication &amp; Roles</h1>
-<p>TaskVault uses JWT (JSON Web Token) based authentication.
-All protected endpoints require a valid access token.</p>
+<h1 id="authentication-security">Authentication &amp; Security</h1>
+<p>TaskVault uses <strong>JWT (JSON Web Token)</strong> for stateless, secure authentication.
+All protected endpoints require a valid <code>access</code> token in the header.</p>
 <hr />
 <h2 id="authentication-mechanism">Authentication Mechanism</h2>
 <ul>
-<li>Access Token: Used for authenticated API requests</li>
-<li>Refresh Token: Used to obtain a new access token</li>
-<li>Tokens are issued during login</li>
-<li>Tokens are invalidated on logout</li>
-<li>Deleted users cannot authenticate</li>
+<li><strong>Access Token</strong>: Short-lived (e.g., 2 hours). Used for API access.</li>
+<li><strong>Refresh Token</strong>: Long-lived (e.g., 7 days). Used to obtain new access tokens.</li>
+<li><strong>Header Format</strong>: <code>Authorization: Bearer &lt;your_access_token&gt;</code></li>
 </ul>
 <hr />
-<h2 id="roles">Roles</h2>
-<p>TaskVault defines two roles:</p>
-<ul>
-<li>Admin</li>
-<li>User</li>
-</ul>
-<p>Each role has clearly defined capabilities.</p>
-<hr />
-<h2 id="role-capabilities">Role Capabilities</h2>
-<table>
-<thead>
-<tr>
-<th>Capability</th>
-<th>Admin</th>
-<th>User</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Register account</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Create task for self</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Assign tasks to users</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>View all tasks</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>View assigned tasks</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Update self tasks</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Update assigned tasks</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Delete self tasks</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Modify task history</td>
-<td>No</td>
-<td>No</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="login-flow">Login Flow</h2>
+<h2 id="authentication-flows">Authentication Flows</h2>
+<h3 id="1-registration-verification">1. Registration &amp; Verification</h3>
 <ol>
-<li>Client sends credentials to <code>/api/v1/auth/login/</code></li>
-<li>Server returns access and refresh tokens</li>
-<li>Access token is sent in <code>Authorization</code> header:</li>
+<li><strong>Register</strong>: User POSTs to <code>/api/v1/auth/tenant/&lt;tenant_id&gt;/register/</code> (or via invite link).</li>
+<li><strong>Email Verification</strong>: System sends a verification link to the user's email.</li>
+<li><strong>Verify</strong>: User clicks link -&gt; <code>POST /api/v1/auth/email-verification/verify/</code> with token.</li>
+<li><em>Constraint</em>: Users cannot login until <code>is_email_verified=True</code>.</li>
 </ol>
+<h3 id="2-login-with-otp-2fa">2. Login with OTP (2FA)</h3>
+<ol>
+<li><strong>Login Request</strong>: <code>POST /api/v1/auth/login/</code> with email/password.</li>
+<li><strong>OTP Challenge</strong>: If valid, system sends an OTP to email and returns a temporary session hash (not yet a token).</li>
+<li><strong>Verify OTP</strong>: <code>POST /api/v1/auth/login/verify-otp/</code> with email, OTP, and session hash.</li>
+<li><strong>Resend OTP</strong>: If expired, <code>POST /api/v1/auth/login/resend-otp/</code>.</li>
+<li><strong>Success</strong>: Server returns <code>access</code> and <code>refresh</code> tokens.</li>
+</ol>
+<h3 id="3-password-management">3. Password Management</h3>
+<ul>
+<li><strong>Forgot Password</strong>: <code>POST /api/v1/auth/forgot-password/</code> triggers an email with a reset link.</li>
+<li><strong>Reset Password</strong>: <code>POST /api/v1/auth/reset-password/&lt;token&gt;/</code> allows setting a new password.</li>
+<li><strong>Change Password</strong>: Authenticated users use <code>POST /api/v1/users/change-password/</code>.</li>
+</ul>
+<h3 id="4-invitations">4. Invitations</h3>
+<ul>
+<li>Tenant Admins generate invites via <code>POST /api/v1/users/invite/</code>.</li>
+<li>New users register via <code>POST /api/v1/auth/invite/&lt;token&gt;/register/</code>.</li>
+</ul>
+<hr />
+<h2 id="token-management">Token Management</h2>
+<h3 id="refreshing-tokens">Refreshing Tokens</h3>
+<p>When the access token expires, use the refresh token to get a new pair:
+<code>POST /api/v1/auth/refresh/</code></p>
+<h3 id="logout-blacklisting">Logout (Blacklisting)</h3>
+<p>To securely logout, the client must send the <strong>refresh token</strong> to be blacklisted:
+<code>POST /api/v1/auth/logout/</code>
+<em>Effect</em>: The refresh token is invalidated immediately.</p>
+<hr />
+<h2 id="security-features">Security Features</h2>
+<ul>
+<li><strong>OTP Rate Limiting</strong>: Prevents brute-force on 2FA.</li>
+<li><strong>Token Blacklist</strong>: Invalidates tokens on logout.</li>
+<li><strong>Password Hashing</strong>: PBKDF2 with SHA256.</li>
+<li><strong>Strict Role Check</strong>: Middleware/Permissions verify Role + Organization Status on every request.</li>
+</ul>
+<hr />
 
 
 
@@ -696,10 +897,11 @@ All protected endpoints require a valid access token.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

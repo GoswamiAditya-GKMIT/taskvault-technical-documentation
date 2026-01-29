@@ -15,8 +15,11 @@
         <link rel="next" href="../conclusion/">
       
       
+        
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -24,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -49,7 +52,6 @@
 
     
     
-    
   </head>
   
   
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rest-api-design" class="md-skip">
+        <a href="#rest-api-endpoints" class="md-skip">
           Skip to content
         </a>
       
@@ -199,53 +201,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
   
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Architecture Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../database-schema/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Database Schema
-    
-  </span>
   
 
       </a>
@@ -265,9 +228,68 @@
   
   
   <span class="md-ellipsis">
+    
+  
     System Requirements
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Schema
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -287,9 +309,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Authentication & Roles
+  
+
     
   </span>
+  
   
 
       </a>
@@ -309,9 +336,41 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Permissions Flow
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows & Edge Cases
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -331,9 +390,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Task History System
+  
+
     
   </span>
+  
   
 
       </a>
@@ -362,9 +426,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     API Endpoints
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -375,9 +444,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     API Endpoints
+  
+
     
   </span>
+  
   
 
       </a>
@@ -400,44 +474,43 @@
         <li class="md-nav__item">
   <a href="#base-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Base Configuration
+      
+        Base Configuration
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pagination" class="md-nav__link">
+  <a href="#consistent-response-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Pagination
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#response-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response Structure
+        Consistent Response Structure
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Response Structure">
+    <nav class="md-nav" aria-label="Consistent Response Structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#success-" class="md-nav__link">
+  <a href="#success-response" class="md-nav__link">
     <span class="md-ellipsis">
-      Success-
+      
+        Success Response
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-" class="md-nav__link">
+  <a href="#error-response" class="md-nav__link">
     <span class="md-ellipsis">
-      Error -
+      
+        Error Response
+      
     </span>
   </a>
   
@@ -449,47 +522,85 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication" class="md-nav__link">
+  <a href="#1-authentication-registration" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication
+      
+        1. Authentication &amp; Registration
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-management" class="md-nav__link">
+  <a href="#2-organization-management" class="md-nav__link">
     <span class="md-ellipsis">
-      User Management
+      
+        2. Organization Management
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
+  <a href="#3-user-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Tasks
+      
+        3. User Management
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
+  <a href="#4-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Comments
+      
+        4. Tasks
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#task-history" class="md-nav__link">
+  <a href="#5-task-history-comments" class="md-nav__link">
     <span class="md-ellipsis">
-      Task History
+      
+        5. Task History &amp; Comments
+      
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-subscriptions-billing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Subscriptions (Billing)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Subscriptions (Billing)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-endpoints-subscriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admin Endpoints (Subscriptions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -513,9 +624,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Conclusion & future Scope
+  
+
     
   </span>
+  
   
 
       </a>
@@ -552,44 +668,43 @@
         <li class="md-nav__item">
   <a href="#base-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Base Configuration
+      
+        Base Configuration
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pagination" class="md-nav__link">
+  <a href="#consistent-response-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Pagination
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#response-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response Structure
+        Consistent Response Structure
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Response Structure">
+    <nav class="md-nav" aria-label="Consistent Response Structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#success-" class="md-nav__link">
+  <a href="#success-response" class="md-nav__link">
     <span class="md-ellipsis">
-      Success-
+      
+        Success Response
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-" class="md-nav__link">
+  <a href="#error-response" class="md-nav__link">
     <span class="md-ellipsis">
-      Error -
+      
+        Error Response
+      
     </span>
   </a>
   
@@ -601,47 +716,85 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication" class="md-nav__link">
+  <a href="#1-authentication-registration" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication
+      
+        1. Authentication &amp; Registration
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-management" class="md-nav__link">
+  <a href="#2-organization-management" class="md-nav__link">
     <span class="md-ellipsis">
-      User Management
+      
+        2. Organization Management
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
+  <a href="#3-user-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Tasks
+      
+        3. User Management
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
+  <a href="#4-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Comments
+      
+        4. Tasks
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#task-history" class="md-nav__link">
+  <a href="#5-task-history-comments" class="md-nav__link">
     <span class="md-ellipsis">
-      Task History
+      
+        5. Task History &amp; Comments
+      
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-subscriptions-billing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Subscriptions (Billing)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Subscriptions (Billing)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-endpoints-subscriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admin Endpoints (Subscriptions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -655,80 +808,14 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
 
-<!-- # REST API Design
-
-## Base Configuration
-
-| Setting | Value |
-|---------|--------|
-| **Base URL** | `/api/v1/` |
-| **API Versioning** | URI-based (e.g., `/api/v1/...`) |
-| **Authentication** | JWT (Access & Refresh Tokens) |
-| **Pagination** | Enabled for all list endpoints (default: 10 items per page) |
-| **Update Strategy** | `PATCH` for partial updates — `PUT` is not used |
-
-# REST API Endpoints
-
-## Authentication
-| Method | Endpoint | Description |
-|--------|----------|--------------|
-| POST | `/auth/register/` | Register user |
-| POST | `/auth/login/` | Login & get JWT token |
-| POST | `/auth/refresh/` | refresh JWT token |
-| POST | `/auth/logout/` | Logout |
-| GET | `/auth/rest-password/` | password reset |
-
----
-
-## User Management 
-| Method | Endpoint | Description |
-|--------|-----------|--------------|
-| GET | `/users/` | List users |
-| GET | `/users/{id}/` | Get single user |
-| PUT/PATCH | `/users/{id}/` | Update user details |
-| DELETE | `/users/{id}/` | Soft delete task |
-
-
-## Tasks
-| Method | Endpoint | Description |
-|--------|-----------|--------------|
-| GET | `/tasks/` | List tasks (filtered by permission) |
-| POST | `/tasks/` | Create task |
-| GET | `/tasks/{id}/` | Get single task |
-| PUT/PATCH | `/tasks/{id}/` | Update task fields |
-| DELETE | `/tasks/{id}/` | Soft delete task |
-
----
-
-<!-- ## Task Assignment
-| Method | Endpoint |
-|--------|-----------|
-| PATCH | `/tasks/{id}/assign/` |
-
----  -->
-<!-- 
-## Comments
-| Method | Endpoint |
-|--------|-----------|
-| POST | `/tasks/{id}/comments/` |
-| GET | `/tasks/{id}/comments/` |
-| GET | `/tasks/{id}/comments/{id}` |
-| PUT/PATCH | `/tasks/{id}/comments/{id}` |
-
----
-
-## Task History
-| Method | Endpoint |
-|--------|-----------|
-| GET | `/tasks/{id}/history/` | View history of a task | -->
-
-<h1 id="rest-api-design">REST API Design</h1>
+<h1 id="rest-api-endpoints">REST API Endpoints</h1>
 <h2 id="base-configuration">Base Configuration</h2>
 <table>
 <thead>
@@ -743,49 +830,42 @@
 <td><code>/api/v1/</code></td>
 </tr>
 <tr>
-<td>Versioning</td>
-<td>URI-based</td>
-</tr>
-<tr>
-<td>Authentication</td>
-<td>JWT</td>
+<td>Auth Header</td>
+<td><code>Authorization: Bearer &lt;token&gt;</code></td>
 </tr>
 <tr>
 <td>Pagination</td>
-<td>Enabled for list endpoints</td>
+<td>Page-based (default 10)</td>
 </tr>
 <tr>
-<td>Update Strategy</td>
-<td>PATCH only</td>
+<td>Content-Type</td>
+<td><code>application/json</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="pagination">Pagination</h2>
-<ul>
-<li>Pagination is applied to the list api's</li>
-</ul>
 <hr />
-<h2 id="response-structure">Response Structure</h2>
-<h3 id="success-">Success-</h3>
-<pre><code>{
-&quot;status&quot;: &quot;success&quot;,
-&quot;message&quot;: &quot;Data retrieved successfully&quot;,
-&quot;data&quot;: {
-&quot;id&quot;: 1,
-&quot;name&quot;: &quot;abcd&quot;
-               },
-}
-</code></pre>
-<h3 id="error-">Error -</h3>
-<pre><code>{
-  &quot;status&quot;: &quot;error&quot;,
-  &quot;message&quot;: &quot;Validation failed&quot;,
-  &quot;errors&quot;: {
+<h2 id="consistent-response-structure">Consistent Response Structure</h2>
+<p>All API responses follow a standardized JSON format for predictability.</p>
+<h3 id="success-response">Success Response</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;message&quot;: &quot;Operation completed successfully.&quot;,
+  &quot;data&quot;: {
 
   }
 }
 </code></pre>
-<h2 id="authentication">Authentication</h2>
+<h3 id="error-response">Error Response</h3>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;message&quot;: &quot;Brief error description&quot;,
+  &quot;error&quot;: {
+
+  }
+}
+</code></pre>
+<hr />
+<h2 id="1-authentication-registration">1. Authentication &amp; Registration</h2>
 <table>
 <thead>
 <tr>
@@ -797,28 +877,100 @@
 <tbody>
 <tr>
 <td>POST</td>
-<td><code>/auth/register/</code></td>
-<td>Register user</td>
+<td><code>/auth/tenant/{tenant_id}/register/</code></td>
+<td>Register a new user under a specific tenant.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><code>/auth/login/</code></td>
-<td>Login</td>
+<td>Initial Login Request (Returns OTP + Session Hash).</td>
 </tr>
 <tr>
 <td>POST</td>
-<td><code>/auth/refresh/</code></td>
-<td>Refresh token</td>
+<td><code>/auth/login/verify-otp/</code></td>
+<td><strong>Verify OTP</strong> to obtain Tokens.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/login/resend-otp/</code></td>
+<td>Resend Login OTP.</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><code>/auth/logout/</code></td>
-<td>Logout</td>
+<td>Logout and Blacklist Refresh Token.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/refresh/</code></td>
+<td>Obtain new Access token.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/email-verification/resend/</code></td>
+<td>Resend email verification link.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/email-verification/verify/</code></td>
+<td>Verify email with token.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/invite/{token}/register/</code></td>
+<td>Complete registration via invite link.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/forgot-password/</code></td>
+<td>Request password reset email.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/auth/reset-password/{token}/</code></td>
+<td>Set new password.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="user-management">User Management</h2>
+<h2 id="2-organization-management">2. Organization Management</h2>
+<p><em>(Role Required: Tenant Admin / Super Admin)</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/organizations/</code></td>
+<td>Create a new Organization.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/organizations/</code></td>
+<td>List all Organizations.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/organizations/{id}/</code></td>
+<td>Get specific Organization details.</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/organizations/{id}/</code></td>
+<td>Update Organization details.</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/organizations/{id}/</code></td>
+<td>Deactivate/Delete Organization.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-user-management">3. User Management</h2>
 <table>
 <thead>
 <tr>
@@ -831,32 +983,46 @@
 <tr>
 <td>GET</td>
 <td><code>/users/</code></td>
-<td>List users (admin only)</td>
+<td>List users in the Organization.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/users/</code></td>
+<td>Create a new user (Tenant Admin).</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/users/invite/</code></td>
+<td>Send email invitation to join Organization.</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><code>/users/{id}/</code></td>
-<td>Get user (admin or self)</td>
+<td>Get specific user details.</td>
 </tr>
 <tr>
 <td>PATCH</td>
 <td><code>/users/{id}/</code></td>
-<td>Update user (admin or self)</td>
+<td>Update user profile/settings.</td>
 </tr>
 <tr>
 <td>DELETE</td>
 <td><code>/users/{id}/</code></td>
-<td>Soft delete user(admin or self)</td>
+<td>Soft delete user.</td>
 </tr>
 <tr>
 <td>POST</td>
-<td><code>/users/reset-password/</code></td>
-<td>Reset password (admin or self)</td>
+<td><code>/users/{id}/restore/</code></td>
+<td><strong>Restore</strong> a previously soft-deleted user.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/users/change-password/</code></td>
+<td>Change authenticated user's password.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="tasks">Tasks</h2>
+<h2 id="4-tasks">4. Tasks</h2>
 <table>
 <thead>
 <tr>
@@ -869,70 +1035,31 @@
 <tr>
 <td>GET</td>
 <td><code>/tasks/</code></td>
-<td>List tasks (admin or self)</td>
+<td>List tasks (Filters: status, priority, assignee).</td>
 </tr>
 <tr>
 <td>POST</td>
 <td><code>/tasks/</code></td>
-<td>Create task (admin or self)</td>
+<td>Create a new task.</td>
 </tr>
 <tr>
 <td>GET</td>
 <td><code>/tasks/{id}/</code></td>
-<td>Get task (admin or self)</td>
+<td>View specific task details.</td>
 </tr>
 <tr>
-<td>PATCH</td>
+<td>PUT/PATCH</td>
 <td><code>/tasks/{id}/</code></td>
-<td>Update task (admin or self)</td>
+<td>Update task (Status, Priority, Content).</td>
 </tr>
 <tr>
 <td>DELETE</td>
 <td><code>/tasks/{id}/</code></td>
-<td>Soft delete task (admin or self)</td>
+<td>Soft delete task.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="comments">Comments</h2>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Endpoint</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td><code>/tasks/{id}/comments/</code></td>
-<td>Add comment (admin or self)</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><code>/tasks/{id}/comments/</code></td>
-<td>List comments (admin or self)</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><code>/tasks/{id}/comments/{id}</code></td>
-<td>Get comment (admin or self)</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td><code>/tasks/{id}/comments/{id}</code></td>
-<td>Update comment (admin or self)</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td><code>/tasks/{id}/comments/{id}</code></td>
-<td>Delete comment (admin or self)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="task-history">Task History</h2>
+<h2 id="5-task-history-comments">5. Task History &amp; Comments</h2>
 <table>
 <thead>
 <tr>
@@ -945,7 +1072,102 @@
 <tr>
 <td>GET</td>
 <td><code>/tasks/{id}/history/</code></td>
-<td>View task history</td>
+<td>View immutable audit log.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/tasks/{id}/comments/</code></td>
+<td>List comments for a task.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/tasks/{id}/comments/</code></td>
+<td>Add a comment to a task.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/tasks/{id}/comments/{comment_id}/</code></td>
+<td>Get specific comment.</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/tasks/{id}/comments/{comment_id}/</code></td>
+<td>Update a comment (Owner Only).</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/tasks/{id}/comments/{comment_id}/</code></td>
+<td>Soft delete a comment.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-subscriptions-billing">6. Subscriptions (Billing)</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/subscriptions/orders/</code></td>
+<td>Create Razorpay Order (Upgrade Plan).</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/subscriptions/status/{order_id}/</code></td>
+<td>Check payment status.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/subscriptions/webhooks/razorpay/</code></td>
+<td>Handle public webhook events.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="admin-endpoints-subscriptions">Admin Endpoints (Subscriptions)</h3>
+<p><em>Role Required: Tenant Admin</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/subscriptions/</code></td>
+<td>List all subscriptions.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/subscriptions/{id}/</code></td>
+<td>View specific subscription details.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/subscriptions/payments/</code></td>
+<td>List all payments.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/subscriptions/payments/{id}/</code></td>
+<td>View specific payment details.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/subscriptions/webhooks/</code></td>
+<td>List all webhook events.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/subscriptions/webhooks/{id}/</code></td>
+<td>View specific webhook event details.</td>
 </tr>
 </tbody>
 </table>
@@ -997,10 +1219,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -9,14 +9,17 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../requirements/">
       
       
         <link rel="next" href="../database-schema/">
       
       
+        
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -24,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -47,7 +50,6 @@
     
       
 
-    
     
     
   </head>
@@ -199,9 +201,41 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Requirements
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -230,9 +264,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Architecture Overview
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -243,9 +282,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Architecture Overview
+  
+
     
   </span>
+  
   
 
       </a>
@@ -268,16 +312,92 @@
         <li class="md-nav__item">
   <a href="#architectural-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Architectural Principles
+      
+        Architectural Principles
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#deep-dive-tech-stack-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive: Tech Stack &amp; Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep Dive: Tech Stack &amp; Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-core-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Core Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-asynchronous-background-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Asynchronous &amp; Background Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-email-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Email Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Middleware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Payments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modules-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
-      Modules Breakdown
+      
+        Modules Breakdown
+      
     </span>
   </a>
   
@@ -303,31 +423,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Database Schema
-    
-  </span>
-  
-
-      </a>
-    </li>
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../requirements/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    System Requirements
-    
   </span>
+  
   
 
       </a>
@@ -347,9 +450,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Authentication & Roles
+  
+
     
   </span>
+  
   
 
       </a>
@@ -369,9 +477,41 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Permissions Flow
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows & Edge Cases
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -391,9 +531,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Task History System
+  
+
     
   </span>
+  
   
 
       </a>
@@ -413,9 +558,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     API Endpoints
+  
+
     
   </span>
+  
   
 
       </a>
@@ -435,9 +585,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Conclusion & future Scope
+  
+
     
   </span>
+  
   
 
       </a>
@@ -474,16 +629,92 @@
         <li class="md-nav__item">
   <a href="#architectural-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Architectural Principles
+      
+        Architectural Principles
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#deep-dive-tech-stack-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive: Tech Stack &amp; Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep Dive: Tech Stack &amp; Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-core-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Core Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-asynchronous-background-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Asynchronous &amp; Background Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-email-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Email Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Middleware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Payments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modules-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
-      Modules Breakdown
+      
+        Modules Breakdown
+      
     </span>
   </a>
   
@@ -499,49 +730,74 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
 
-<!-- 
-# System Architecture
-
-TaskVault follows a layered backend architecture:
-
-Client → URL → DRF Views (Business Logic) → Serializers → Models → Postgres DB
-
-
-## Modules Breakdown
-| Module | Description |
-|--------|-------------|
-| `accounts` | Authentication, User, roles, permissions |
-| `tasks` | Task CRUD, assignment logic, status & priority changes |
-| `comments` | Adds discussion and collaboration on tasks |
-| `task history` | Stores immutable audit logs |
-
- -->
-
 <h1 id="system-architecture">System Architecture</h1>
 <p>TaskVault follows a layered backend architecture that separates responsibilities clearly and keeps business logic maintainable.</p>
 <p>Request Flow:</p>
 <p>Client<br />
 → URL Router<br />
-→ DRF Views<br />
-→ Serializers<br />
-→ Service Layer<br />
-→ Models<br />
+→ DRF Views (Permissions &amp; Auth)<br />
+→ Serializers (Validation)<br />
+→ Service Layer (Business Logic)<br />
+→ Models (Data Structure)<br />
 → PostgreSQL Database</p>
 <hr />
 <h2 id="architectural-principles">Architectural Principles</h2>
 <ul>
-<li>API-first design</li>
-<li>Separation of concerns</li>
-<li>Explicit permission handling</li>
-<li>Service-based business logic</li>
-<li>Soft delete over hard delete</li>
-<li>Immutable audit logs</li>
+<li><strong>API-First Design</strong>: All functionalities are exposed via RESTful endpoints.</li>
+<li><strong>Separation of Concerns</strong>: Logic is decoupled into Views, Services, and Models.</li>
+<li><strong>Multi-Tenancy</strong>: Data is logically isolated by <code>organization_id</code>.</li>
+<li><strong>Soft Deletion</strong>: Entities are marked as deleted rather than physically removed.</li>
+<li><strong>Immutable Audit Logs</strong>: Critical changes (task status, payments) are permanently recorded.</li>
+</ul>
+<hr />
+<h2 id="deep-dive-tech-stack-components">Deep Dive: Tech Stack &amp; Components</h2>
+<h3 id="1-core-framework">1. Core Framework</h3>
+<ul>
+<li><strong>Django 6.0</strong>: The backbone of the application, utilizing its ORM for database abstraction and signal system.</li>
+<li><strong>Django REST Framework (DRF)</strong>: Powers the API layer with robust Serializers for validation and ViewSets for logic.</li>
+<li><strong>PostgreSQL (<code>psycopg 3</code> driver)</strong>: Primary relational database chosen for its reliability and JSONB support (used in Webhook payloads).</li>
+</ul>
+<h3 id="2-asynchronous-background-processing">2. Asynchronous &amp; Background Processing</h3>
+<ul>
+<li><strong>Celery</strong>: Distributed task queue handling long-running operations.<ul>
+<li><em>Tasks</em>: sending emails (<code>users.tasks</code>), processing webhooks (<code>subscriptions.tasks</code>).</li>
+</ul>
+</li>
+<li><strong>Celery Beat</strong>: Scheduler for periodic maintenance jobs.<ul>
+<li><em>Jobs</em>: <code>reconcile_pending_subscriptions</code> (Hourly), <code>hard_delete_unverified_users</code> (Daily), <code>clear_blacklisted_tokens</code> (Daily).</li>
+</ul>
+</li>
+<li><strong>Redis</strong>: In-memory data store acting as:<ul>
+<li><strong>Message Broker</strong>: For Celery task queues.</li>
+<li><strong>Cache Backend</strong>: Using <code>django-redis</code> for caching API responses and sessions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-email-service">3. Email Service</h3>
+<ul>
+<li><strong>Brevo (formerly Sendinblue)</strong>: Transactional email provider via SMTP relay.<ul>
+<li>Used for Invitation links, Password Resets, and Email Verification.</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-middleware">4. Middleware</h3>
+<ul>
+<li><strong>LoggingMiddleware</strong> (<code>core.middleware</code>): Custom middleware that intercepts every request/response loop to log metadata (User ID, Path, Status Code, Duration) to JSON logs for observability.</li>
+</ul>
+<h3 id="4-payments">4. Payments</h3>
+<ul>
+<li><strong>Razorpay Integration</strong>: Handles all payment processing.<ul>
+<li>Uses Webhooks for real-time status updates (e.g., <code>payment.captured</code>, <code>payment.failed</code>).</li>
+<li>Dedicated <code>webhook_events</code> table ensures idempotency.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="modules-breakdown">Modules Breakdown</h2>
@@ -550,28 +806,29 @@ Client → URL → DRF Views (Business Logic) → Serializers → Models → Pos
 <tr>
 <th>Module</th>
 <th>Description</th>
+<th>Key Components</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>users</td>
-<td>Authentication, user management, roles</td>
+<td><code>core</code></td>
+<td>Foundation layer.</td>
+<td><code>LoggingMiddleware</code>, <code>JSONFormatter</code>, Custom Exceptions, <code>IsSuperAdmin</code>/<code>IsTenantAdmin</code> Permissions.</td>
 </tr>
 <tr>
-<td>tasks</td>
-<td>Task CRUD, assignment rules, filtering</td>
+<td><code>users</code></td>
+<td>Identity &amp; Access Management.</td>
+<td><code>User</code>, <code>Organization</code> models. auth endpoints (<code>/login</code>, <code>/verify-otp</code>), <code>RegisterAPIView</code>.</td>
 </tr>
 <tr>
-<td>comments</td>
-<td>Task discussion and collaboration</td>
+<td><code>tasks</code></td>
+<td>Project Management domain.</td>
+<td><code>Task</code>, <code>Comment</code>, <code>TaskHistory</code> models. <code>TaskViewSet</code> with complex filtering logic.</td>
 </tr>
 <tr>
-<td>task history</td>
-<td>Immutable audit logs for task updates</td>
-</tr>
-<tr>
-<td>core</td>
-<td>Shared utilities, permissions, pagination</td>
+<td><code>subscriptions</code></td>
+<td>Billing &amp; Revenue.</td>
+<td><code>Subscription</code>, <code>Payment</code>, <code>WebhookEvent</code>. <code>razorpay</code> utilities, atomic transaction services.</td>
 </tr>
 </tbody>
 </table>
@@ -624,10 +881,11 @@ Client → URL → DRF Views (Business Logic) → Serializers → Models → Pos
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

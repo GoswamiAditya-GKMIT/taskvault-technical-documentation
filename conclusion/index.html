@@ -13,8 +13,11 @@
       
       
       
+        
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -22,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -45,7 +48,6 @@
     
       
 
-    
     
     
   </head>
@@ -197,53 +199,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
   
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Architecture Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../database-schema/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Database Schema
-    
-  </span>
   
 
       </a>
@@ -263,9 +226,68 @@
   
   
   <span class="md-ellipsis">
+    
+  
     System Requirements
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Schema
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -285,9 +307,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Authentication & Roles
+  
+
     
   </span>
+  
   
 
       </a>
@@ -307,9 +334,41 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Permissions Flow
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows & Edge Cases
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -329,9 +388,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Task History System
+  
+
     
   </span>
+  
   
 
       </a>
@@ -351,9 +415,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     API Endpoints
+  
+
     
   </span>
+  
   
 
       </a>
@@ -382,9 +451,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Conclusion & future Scope
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -395,9 +469,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Conclusion & future Scope
+  
+
     
   </span>
+  
   
 
       </a>
@@ -420,7 +499,9 @@
         <li class="md-nav__item">
   <a href="#future-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Future Scope
+      
+        Future Scope
+      
     </span>
   </a>
   
@@ -463,7 +544,9 @@
         <li class="md-nav__item">
   <a href="#future-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Future Scope
+      
+        Future Scope
+      
     </span>
   </a>
   
@@ -479,6 +562,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -486,19 +570,18 @@
 
 
 <h1 id="conclusion">Conclusion</h1>
-<p>TaskVault is designed as a secure, scalable, and role-based task management backend system.
-It addresses common limitations of traditional task tracking applications by enforcing strict access control, maintaining immutable audit logs, and ensuring data integrity through soft deletion.</p>
-<p>TaskVault’s API-first design allows it to be easily integrated with modern web and mobile frontends.
-Its structured workflow, combined with task history and comments, makes it suitable for both individual task management and team-based collaboration environments.</p>
+<p>TaskVault has evolved into a comprehensive, multi-tenant SaaS backend.
+It successfully addresses the complex requirements of data isolation, role-based security, and subscription tracking.
+By leveraging a clean layered architecture and explicit permission classes, the system ensures both scalability and maintainability.</p>
+<p>The move to an Organization-based model allows TaskVault to serve not just individuals but entire teams and companies securely.</p>
 <hr />
 <h2 id="future-scope">Future Scope</h2>
-<p>TaskVault is designed with extensibility in mind. Possible future enhancements include:</p>
+<p>While the core system is robust, future enhancements could include:</p>
 <ul>
-<li>User reactivation and restore workflows for previously soft-deleted users.</li>
-<li>Task restoration and archival features for long-term task storage.</li>
-<li>email verification for user register</li>
-<li>Notification and alert systems for task assignments, updates, and deadlines.</li>
-<li>Role expansion to support additional user types such as managers or reviewers.</li>
+<li><strong>Team Management</strong>: Groups within an Organization for finer-grained sharing.</li>
+<li><strong>Recurring Subscriptions</strong>: Moving beyond "Lifetime" plans to monthly/yearly billing.</li>
+<li><strong>Notifications</strong>: Email/Push alerts for task deadlines and assignments.</li>
+<li><strong>Advanced Analytics</strong>: Dashboards for Tenant Admins to view productivity metrics.</li>
 </ul>
 
 
@@ -548,10 +631,11 @@ Its structured workflow, combined with task history and comments, makes it suita
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

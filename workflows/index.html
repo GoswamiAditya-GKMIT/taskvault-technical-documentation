@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../architecture/">
+        <link rel="prev" href="../permissions/">
       
       
-        <link rel="next" href="../authentication/">
+        <link rel="next" href="../task-history/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Database Schema - TaskVault - Technical Documentation</title>
+        <title>Workflows & Edge Cases - TaskVault - Technical Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#database-schema" class="md-skip">
+        <a href="#workflow-scenarios-edge-cases" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Database Schema
+              Workflows & Edge Cases
             
           </span>
         </div>
@@ -274,37 +274,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Database Schema
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../database-schema/" class="md-nav__link">
         
   
   
@@ -320,87 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#er-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ER Diagram
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#table-descriptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Table Descriptions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Table Descriptions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-organizations-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Organizations &amp; Users
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-task-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Task Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-billing-subscriptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Billing (Subscriptions)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -463,10 +355,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../workflows/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows & Edge Cases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -482,6 +401,153 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-user-management-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. User Management Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Account Lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-task-management-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Task Management Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Task Management Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-creation-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Creation &amp; Assignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-subtasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Subtasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Deletion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-organization-deactivation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Organization Deactivation Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comment-management-utils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comment Management Utils
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-edge-cases-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Edge Cases &amp; Constraints
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -594,10 +660,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#er-diagram" class="md-nav__link">
+  <a href="#1-user-management-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ER Diagram
+        1. User Management Workflow
       
     </span>
   </a>
@@ -605,22 +671,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#table-descriptions" class="md-nav__link">
+  <a href="#hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Table Descriptions
+        Hierarchy
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Table Descriptions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Account Lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-task-management-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Task Management Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Task Management Workflow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-organizations-users" class="md-nav__link">
+  <a href="#a-creation-assignment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Organizations &amp; Users
+        A. Creation &amp; Assignment
       
     </span>
   </a>
@@ -628,10 +716,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-task-management" class="md-nav__link">
+  <a href="#b-subtasks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Task Management
+        B. Subtasks
       
     </span>
   </a>
@@ -639,10 +727,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-billing-subscriptions" class="md-nav__link">
+  <a href="#c-updates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Billing (Subscriptions)
+        C. Updates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Deletion
       
     </span>
   </a>
@@ -651,6 +750,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-organization-deactivation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Organization Deactivation Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comment-management-utils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comment Management Utils
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-edge-cases-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Edge Cases &amp; Constraints
+      
+    </span>
+  </a>
   
 </li>
       
@@ -671,76 +803,81 @@
 
 
 
-<h1 id="database-schema">Database Schema</h1>
-<p>TaskVault uses a relational database (PostgreSQL recommended) with a multi-tenant schema design. All primary entities are linked to an <strong>Organization</strong>.</p>
-<h2 id="er-diagram">ER Diagram</h2>
-<p><img alt="alt text" src="../image-1.png" /></p>
-<h2 id="table-descriptions">Table Descriptions</h2>
-<h3 id="1-organizations-users">1. Organizations &amp; Users</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Table</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>ORGANIZATIONS</code></td>
-<td style="text-align: left;">The top-level tenant entity. Contains subscription status (<code>is_premium</code>).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>USERS</code></td>
-<td style="text-align: left;">Members of an organization. Roles: <code>SUPER_ADMIN</code>, <code>TENANT_ADMIN</code>, <code>USER</code>.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="2-task-management">2. Task Management</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Table</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>TASKS</code></td>
-<td style="text-align: left;">Core work unit. Linked to an Org, Owner, and Assignee. Supports subtasks.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>TASKS_HISTORY</code></td>
-<td style="text-align: left;">Audit log for status/priority changes.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>COMMENTS</code></td>
-<td style="text-align: left;">Discussion threads on tasks.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="3-billing-subscriptions">3. Billing (Subscriptions)</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Table</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>SUBSCRIPTIONS</code></td>
-<td style="text-align: left;">Tracks the premium status of an organization. One-to-One with Org.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>PAYMENTS</code></td>
-<td style="text-align: left;">Log of all payment attempts (success or failure) via Razorpay.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>WEBHOOK_EVENTS</code></td>
-<td style="text-align: left;">Raw storage of incoming webhook data for auditing and debugging.</td>
-</tr>
-</tbody>
-</table>
+<h1 id="workflow-scenarios-edge-cases">Workflow Scenarios &amp; Edge Cases</h1>
+<h2 id="1-user-management-workflow">1. User Management Workflow</h2>
+<h2 id="hierarchy"><strong>Hierarchy</strong></h2>
+<ol>
+<li><code>Super Admin</code> -&gt; onboards <code>Tenant Admin</code> (Organization created automatically).</li>
+<li><code>Tenant Admin</code> -&gt; creates <code>Normal User</code> (linked to the same Organization).</li>
+</ol>
+<h2 id="account-lifecycle"><strong>Account Lifecycle</strong></h2>
+<ul>
+<li><strong>Invitation</strong>: Users can be invited via email tokens.</li>
+<li><strong>Verification</strong>: New users must verify their email (<code>is_email_verified=True</code>) to access full features.</li>
+<li><strong>Restoration</strong>: Soft-deleted users can be <strong>Restored</strong> by Tenant Admins using the <code>/users/{id}/restore/</code> endpoint, recovering their access and associations.</li>
+<li><strong>Hard Deletion</strong>: A scheduled Celery task permanently removes users who have been soft-deleted for &gt; 30 days (configurable).</li>
+</ul>
+<hr />
+<h2 id="2-task-management-workflow">2. Task Management Workflow</h2>
+<h3 id="a-creation-assignment">A. Creation &amp; Assignment</h3>
+<ul>
+<li><strong>Tenant Admin</strong>: Can create tasks and assign them to <em>any</em> active user in the Org.</li>
+<li><strong>Normal User</strong>: Can create tasks but <strong>MUST</strong> be the assignee (Self-Assignment only).</li>
+</ul>
+<h3 id="b-subtasks">B. Subtasks</h3>
+<ul>
+<li><strong>Nesting Limit</strong>: Max depth is <strong>1</strong>. (Parent -&gt; Subtask).</li>
+<li><strong>Ownership Rule</strong>: Users can only create subtasks for parents they <strong>OWN</strong>.</li>
+<li><strong>Admin Rule</strong>: Tenant Admins can create subtasks for any task in their Org.</li>
+</ul>
+<h3 id="c-updates">C. Updates</h3>
+<ul>
+<li><strong>Status Change</strong>: Updating status to <code>COMPLETED</code> is <strong>BLOCKED</strong> if the task has active (incomplete) Subtasks. <em>All subtasks must be completed first.</em></li>
+<li><strong>Deleted Tasks</strong>: Updating a soft-deleted task is <strong>BLOCKED</strong> for everyone (returns 404/403).</li>
+</ul>
+<h3 id="d-deletion">D. Deletion</h3>
+<ul>
+<li><strong>Parent/Subtask Constraint</strong>: You <strong>CANNOT</strong> delete a Parent Task if it has active Subtasks. You must delete the subtasks first.</li>
+<li><strong>Effects</strong>: Searching for the task returns 404 for Normal Users. Admins can look it up by ID (Read-Only).</li>
+</ul>
+<hr />
+<h2 id="3-organization-deactivation-workflow">3. Organization Deactivation Workflow</h2>
+<p>If an Organization is marked <code>is_active=False</code> (e.g., for non-payment or policy violation):</p>
+<ol>
+<li><strong>Login Block</strong>:<ul>
+<li><strong>Tenant Admins</strong> attempting login receive: <em>"Your organization is deactivated please contact super admin to reactive the organization"</em>.</li>
+<li><strong>Normal Users</strong> attempting login receive: <em>"Your organization is deactivated"</em>.</li>
+</ul>
+</li>
+<li><strong>Admin Freeze</strong>:<ul>
+<li>Super Admins <strong>cannot create</strong> new Tenant Admins for this Org.</li>
+<li>Super Admins <strong>cannot delete</strong> existing Tenant Admins for this Org.</li>
+</ul>
+</li>
+<li><strong>Reactivation</strong>:<ul>
+<li>Super Admin patches <code>is_active=True</code>. Access is instantly restored.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="4-comment-management-utils">4. Comment Management Utils</h2>
+<ul>
+<li><strong>Create</strong>: Users can comment on any task they can view (Own/Assigned).</li>
+<li><strong>View</strong>: Visibility matches Task visibility.</li>
+<li><strong>Update/Delete</strong>: Users can only edit/delete <strong>their own</strong> comments. Tenant Admins can delete <strong>any</strong> comment (moderation).</li>
+</ul>
+<hr />
+<h2 id="5-edge-cases-constraints">5. Edge Cases &amp; Constraints</h2>
+<ol>
+<li><strong>Unique Titles</strong>: Task titles must be unique per User constraints (normalized case-insensitive check).</li>
+<li><strong>Past Deadlines</strong>: Creating/Updating a task with a deadline in the past is blocked.</li>
+<li><strong>Self-Assignment</strong>: Normal Users trying to assign tasks to colleagues will face a Validation Error.</li>
+<li><strong>Deleted Entity Interaction</strong>:<ul>
+<li>You cannot assign a task to a deleted user.</li>
+<li>You cannot create a subtask under a deleted parent.</li>
+</ul>
+</li>
+</ol>
 
 
 
